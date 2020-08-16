@@ -12,15 +12,54 @@
     display: block;
   }
 
+  .footer-left {
+    width: 50%;
+  }
+
   .footer-right {
     display: block;
+    width: 50%;
   }
 
   .footer-introduce {
-    width: 150px;
+    width: 100%;
+  }
+
+  .footer-post {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .category {
+    width: 100%;
+    margin-right: 0;
   }
 
   .search-field {
     width: 150px;
+  }
+
+  .pageend-contents p {
+    margin-left: 0;
+  }
+
+  main h1 {
+    font-size: 22px;
+  }
+
+  .site-title h1 {
+    font-size: 26px;
+  }
+
+  .links {
+    display: none;
+  }
+
+  .pageend {
+    margin: 0;
+  }
+
+  .pageend-contents p {
+    margin: 0 auto;
   }
 }
