@@ -11,4 +11,16 @@
   .header-list-icon {
     display: block;
   }
+
+  .footer-right {
+    display: block;
+  }
+
+  .footer-introduce {
+    width: 150px;
+  }
+
+  .search-field {
+    width: 150px;
+  }
 }
