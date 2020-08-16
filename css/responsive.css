@@ -1,0 +1,14 @@
+@media(max-width: 600px) {
+
+  body {
+    margin: 0;
+  }
+
+  .header-list {
+    display: none;
+  }
+
+  .header-list-icon {
+    display: block;
+  }
+}

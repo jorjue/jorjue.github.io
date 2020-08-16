@@ -1,0 +1,231 @@
+body {
+  font-family: Georgia, 游明朝, YuMincho, sans-serif;
+  margin: 60px 40px;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+header {
+  clear: right;
+}
+
+.container {
+  width: 1035px;
+  margin: 0 auto;
+  /* background-color: tomato; */
+}
+
+.header-content {
+  display: inline-flex;
+  margin-bottom: 70px;
+}
+
+.site-title {
+  width: 260px;
+  padding-right: 75px;
+  padding-bottom: 10px;
+}
+
+.site-title h1 {
+  font-size: 36px;
+}
+
+.header-list li {
+  display: inline-flex;
+  padding: 0 18px;
+  font-size: 16px;
+  padding-top: 30px;
+}
+
+.header-list-icon {
+  display: none;
+  float: right;
+  font-size: 32px;
+}
+
+.fas {
+  padding-left: 10px;
+}
+
+.fa-search {
+  margin-left: 170px;
+  font-size: 24px;
+}
+
+main {
+  margin-top: 90px;
+}
+
+main h1 {
+  color: #777;
+  font-weight: normal;
+  font-size: 27px;
+}
+
+section {
+  margin-top: 110px;
+}
+
+article {
+  display: flex;
+  padding-bottom: 70px;
+}
+
+.date {
+  padding-right: 210px;
+}
+
+.date p {
+  width: 110px;
+  color: #777;
+}
+
+.newsfeed h1 {
+  font-size: 22px;
+  color: black;
+  font-weight: bold;
+}
+
+.newsfeed p {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #777;
+}
+
+.pagelink {
+  text-align: center;
+}
+
+.pagelink a {
+  padding: 15px 20px;
+  border: 1px solid#777;
+  text-decoration: none;
+  color: #777;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+footer {
+  margin-top: 100px;
+}
+
+footer > .container {
+  border-top: 1px solid silver;
+  border-bottom: 1px solid silver;
+  display: flex;
+}
+
+.footer-left {
+  margin-right: 50px;
+}
+
+.profile {
+  padding-top: 70px;
+  display: flex;
+}
+
+.icon img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.writername {
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+.writername p {
+  color: black;
+  font-weight: bold;
+}
+
+.writername span {
+  color: #999;
+  font-size: 22px;
+  margin-right: 10px;
+}
+
+.profile-text {
+  width: 260px;
+  margin-top: 20px;
+  color: #999;
+  padding-bottom: 100px;
+}
+
+.footer-right {
+  display: flex;
+}
+
+.footer-introduce {
+  width: 200px;
+  padding-top: 70px;
+  margin-right: 40px;
+}
+
+.footer-post {
+  width: 233px;
+  padding-top: 70px;
+  margin-right: 20px;
+}
+
+.category {
+  width: 233px;
+  padding-top: 70px;
+  padding-right: 20px;
+}
+
+.footer-right h3 {
+  padding-bottom: 30px;
+  font-size: 16px;
+}
+
+.footer-right h4 {
+  text-decoration: underline;
+  color: #999;
+}
+
+.footer-right p {
+  font-size: 16px;
+  color: #999;
+}
+
+.footer-post p {
+  margin-bottom: 10px;
+}
+
+.category h4 {
+  margin-bottom: 10px;
+}
+
+.search-field {
+  margin-top: 80px;
+  font-size: 18px;
+  padding: 8px;
+  border: 1px solid #ddd
+}
+
+.pageend {
+  margin-top: 50px;
+}
+
+.pageend-contents {
+  display: flex;
+}
+
+.pageend span { 
+  color: #999;
+  font-size: 22px;
+  margin-right: 20px;
+}
+
+.pageend-contents p {
+  margin-left: 220px;
+}
