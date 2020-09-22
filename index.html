@@ -3,102 +3,163 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>わんわんお寿司 - わんわんグループ</title>
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/styles.css">
+  <title>JavaScript Practice</title>
+  <style>
+
+    .container {
+      display: flex;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: skyblue;
+      cursor: pointer;
+      transition: .8s;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+
+    .circle {
+      background: pink;
+      border-radius: 50%;
+      transform: rotate(360deg);
+    }
+
+    h1 {
+      padding-left: 10px;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <div class="header-left">
-        <h1>わんわんお寿司</h1>
-        <p>by wanwan group</p>
-      </div>
-      <div class="header-right">
-        <p>TEL:0120-111-111</p>
-        <p>〒252-1111</p>
-        <p>神奈川県相模原市南区わんわん町1-1-1</p>
-      </div>
-    </div>
-  </header>
+  <h1>9マスパズルゲーム</h1>
 
-  <main>
-    <div class="container">
+  <p>ルール説明</p>
+  <p>各マスをクリックすると、そのマスと隣接する４マスが反転します。<br>
+  全てのマスをピンクの丸に出来たらクリアです。</p>
 
-      <nav>
-        <ul>
-          <li><a href="#message">ご挨拶</a></li>
-          <li><a href="#checkout">ご注文</a></li>
-          <li><a href="#season">季節の<br>メニュー</a></li>
-          <li>ご予約</li>
-        </ul>
-      </nav>
-  
-      <section id="message">
-        <img src="img/b707c968ea8b36bb7d5e0574fd450637.jpg" alt="お寿司の画像です">
-        <h1>行楽のお供に、<br>
-        おいしいわんわんお寿司</h1>
-        <p>
-          わんわんグループが自信をもってお勧めする<br>
-          わんわんお寿司。紅葉のシーズンに、<br>
-          会議・会食に。<br>
-          あなたの食卓を素敵に彩ります。
-        </p>
-      </section>
+  <div class="container">
+    <div class="box" id="target1"></div>
+    <div class="box" id="target2"></div>
+    <div class="box" id="target3"></div>
+  </div>
+  <div class="container">
+    <div class="box" id="target4"></div>
+    <div class="box" id="target5"></div>
+    <div class="box" id="target6"></div>
+  </div>
+  <div class="container">
+    <div class="box" id="target7"></div>
+    <div class="box" id="target8"></div>
+    <div class="box" id="target9"></div>
+  </div>
 
-    </div>
+  <input type="button" value="Reset" onclick="window.location.reload();">
 
-  </main>
+  <script>
+    'use strict';
 
-  <section class="form" id="checkout">
-    <div class="container">
-      <p>
-        ご予約は1名様から承ります。<br>
-        便利なインターネット受付をご利用ください。
-      </p>
-      <div class="order-form">
-        <p>お名前</p>
-        <input type="text">
-        <p>電話番号</p>
-        <input type="tel">
-        <p>メールアドレス</p>
-        <input type="email">
-        <p>ご住所</p>
-        <p>都道府県、市区町村</p>
-        <input type="text" class="address">
-        <p>番地</p>
-        <input type="text" class="address">
-        <p>ご注文</p>
-        <input type="checkbox" name="set" value="わんわんセット松" id="set1">
-        <label for="set1">わんわんセット松 800円</label>
-        <br>
-        <input type="checkbox" name="set" value="わんわんセット竹" id="set2">
-        <label for="set2">わんわんセット竹 700円</label>
-        <br>
-        <input type="checkbox" name="set" value="わんわんセット梅" id="set3">
-        <label for="set3">わんわんセット梅 600円</label>
-        <br>
-        <input type="checkbox" name="set" value="季節のわんわんお寿司盛り合わせ" id="set4">
-        <label for="set4">季節のわんわんお寿司盛り合わせ 850円</label>
-        <br>
-        <input type="submit" value="ご注文を送信" class="submit">
-      </div>
-    </div>
+    let random = Math.floor(Math.random() * 9);
 
-  </section>
+    const target1 = document.getElementById('target1')
+    const target2 = document.getElementById('target2')
+    const target3 = document.getElementById('target3')
+    const target4 = document.getElementById('target4')
+    const target5 = document.getElementById('target5')
+    const target6 = document.getElementById('target6')
+    const target7 = document.getElementById('target7')
+    const target8 = document.getElementById('target8')
+    const target9 = document.getElementById('target9')
 
-  <section class="season" id="season">
-    <h1>今月の季節寿司</h1>
-    <p>秋といえばサンマ。<br>
-    今月の季節寿司のセットは、豪華サンマ尽くし！<br>
-      850円で販売中です！お見逃しなく！
-    </p>
-    <img src="img/2019030801-thumb-300xauto-601.jpg" alt="サンマの画像です">
-  </section>
+    switch (random) {
+      case 0:
+      target1.classList.add('circle');
+      break
+      case 1:
+      target2.classList.add('circle');
+      break
+      case 2:
+      target3.classList.add('circle');
+      break
+      case 3:
+      target4.classList.add('circle');
+      break
+      case 4:
+      target5.classList.add('circle');
+      break
+      case 5:
+      target6.classList.add('circle');
+      break
+      case 6:
+      target7.classList.add('circle');
+      break
+      case 7:
+      target8.classList.add('circle');
+      break
+      case 8:
+      target9.classList.add('circle');
+      break
+    }
 
-  <footer>
-    wanwan group inc,
-    わんわんお寿司
-  </footer>
+
+    target1.addEventListener('click', () => {
+      target1.classList.toggle('circle');
+      target2.classList.toggle('circle');
+      target4.classList.toggle('circle');
+    });
+    target2.addEventListener('click', () => {
+      target1.classList.toggle('circle');
+      target2.classList.toggle('circle');
+      target3.classList.toggle('circle');
+      target5.classList.toggle('circle');
+    });
+    target3.addEventListener('click', () => {
+      target2.classList.toggle('circle');
+      target3.classList.toggle('circle');
+      target6.classList.toggle('circle');
+    });
+    target4.addEventListener('click', () => {
+      target1.classList.toggle('circle');
+      target4.classList.toggle('circle');
+      target5.classList.toggle('circle');
+      target7.classList.toggle('circle');
+    });
+    target5.addEventListener('click', () => {
+      target2.classList.toggle('circle');
+      target4.classList.toggle('circle');
+      target5.classList.toggle('circle');
+      target6.classList.toggle('circle');
+      target8.classList.toggle('circle');
+    });
+    target6.addEventListener('click', () => {
+      target3.classList.toggle('circle');
+      target5.classList.toggle('circle');
+      target6.classList.toggle('circle');
+      target9.classList.toggle('circle');
+      // target8.classList.toggle('circle');
+    });
+    target7.addEventListener('click', () => {
+      target4.classList.toggle('circle');
+      target7.classList.toggle('circle');
+      target8.classList.toggle('circle');
+      // target6.classList.toggle('circle');
+      // target8.classList.toggle('circle');
+    });
+    target8.addEventListener('click', () => {
+      target5.classList.toggle('circle');
+      target7.classList.toggle('circle');
+      target8.classList.toggle('circle');
+      target9.classList.toggle('circle');
+      // target8.classList.toggle('circle');
+    });
+    target9.addEventListener('click', () => {
+      target6.classList.toggle('circle');
+      target8.classList.toggle('circle');
+      target9.classList.toggle('circle');
+      // target6.classList.toggle('circle');
+      // target8.classList.toggle('circle');
+    });
+
+  </script>
 </body>
 </html>
