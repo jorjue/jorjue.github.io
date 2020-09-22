@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>9マスパズルゲーム</title>
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+  <style>
+
+    .container {
+      display: flex;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: skyblue;
+      cursor: pointer;
+      transition: .8s;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+
+    .circle {
+      background: pink;
+      border-radius: 50%;
+      transform: rotate(360deg);
+    }
+
+    h1 {
+      padding-left: 10px;
+    }
+
+    .fab {
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+  <h1>9マスパズルゲーム</h1>
+
+  <p>ルール説明</p>
+  <p>各マスをクリックすると、そのマスと隣接する４マスが反転します。<br>
+  全てのマスをピンクの丸に出来たらクリアです。</p>
+
+  <div class="container">
+    <div class="box" id="target1"></div>
+    <div class="box" id="target2"></div>
+    <div class="box" id="target3"></div>
+  </div>
+  <div class="container">
+    <div class="box" id="target4"></div>
+    <div class="box" id="target5"></div>
+    <div class="box" id="target6"></div>
+  </div>
+  <div class="container">
+    <div class="box" id="target7"></div>
+    <div class="box" id="target8"></div>
+    <div class="box" id="target9"></div>
+  </div>
+
+  <input type="button" value="Reset" onclick="window.location.reload();">
+
+  <p>Create by コッコ先生　<a href="https://twitter.com/coccosProgram"><span class="fab fa-twitter"></span></a></p>
+
+  <script>
+    'use strict';
+
+    let random = Math.floor(Math.random() * 9);
+
+    const target1 = document.getElementById('target1')
+    const target2 = document.getElementById('target2')
+    const target3 = document.getElementById('target3')
+    const target4 = document.getElementById('target4')
+    const target5 = document.getElementById('target5')
+    const target6 = document.getElementById('target6')
+    const target7 = document.getElementById('target7')
+    const target8 = document.getElementById('target8')
+    const target9 = document.getElementById('target9')
+
+    switch (random) {
+      case 0:
+      target1.classList.add('circle');
+      break
+      case 1:
+      target2.classList.add('circle');
+      break
+      case 2:
+      target3.classList.add('circle');
+      break
+      case 3:
+      target4.classList.add('circle');
+      break
+      case 4:
+      target5.classList.add('circle');
+      break
+      case 5:
+      target6.classList.add('circle');
+      break
+      case 6:
+      target7.classList.add('circle');
+      break
+      case 7:
+      target8.classList.add('circle');
+      break
+      case 8:
+      target9.classList.add('circle');
+      break
+    }
+
+
+    target1.addEventListener('click', () => {
+      target1.classList.toggle('circle');
+      target2.classList.toggle('circle');
+      target4.classList.toggle('circle');
+    });
+    target2.addEventListener('click', () => {
+      target1.classList.toggle('circle');
+      target2.classList.toggle('circle');
+      target3.classList.toggle('circle');
+      target5.classList.toggle('circle');
+    });
+    target3.addEventListener('click', () => {
+      target2.classList.toggle('circle');
+      target3.classList.toggle('circle');
+      target6.classList.toggle('circle');
+    });
+    target4.addEventListener('click', () => {
+      target1.classList.toggle('circle');
+      target4.classList.toggle('circle');
+      target5.classList.toggle('circle');
+      target7.classList.toggle('circle');
+    });
+    target5.addEventListener('click', () => {
+      target2.classList.toggle('circle');
+      target4.classList.toggle('circle');
+      target5.classList.toggle('circle');
+      target6.classList.toggle('circle');
+      target8.classList.toggle('circle');
+    });
+    target6.addEventListener('click', () => {
+      target3.classList.toggle('circle');
+      target5.classList.toggle('circle');
+      target6.classList.toggle('circle');
+      target9.classList.toggle('circle');
+      // target8.classList.toggle('circle');
+    });
+    target7.addEventListener('click', () => {
+      target4.classList.toggle('circle');
+      target7.classList.toggle('circle');
+      target8.classList.toggle('circle');
+      // target6.classList.toggle('circle');
+      // target8.classList.toggle('circle');
+    });
+    target8.addEventListener('click', () => {
+      target5.classList.toggle('circle');
+      target7.classList.toggle('circle');
+      target8.classList.toggle('circle');
+      target9.classList.toggle('circle');
+      // target8.classList.toggle('circle');
+    });
+    target9.addEventListener('click', () => {
+      target6.classList.toggle('circle');
+      target8.classList.toggle('circle');
+      target9.classList.toggle('circle');
+      // target6.classList.toggle('circle');
+      // target8.classList.toggle('circle');
+    });
+
+  </script>
+</body>
+</html>
