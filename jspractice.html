@@ -5,18 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JS Practice</title>
   <style>
-    @font-face　{
-        font-family: 'しねきゃぷしょん';
-        src: url('https://cdn.leafscape.be/cinecaption/cinecaption227.woff2')
-            format("woff2");
-      }
-    body {
-      background: pink;
-    }
-    
-    li {
+    @font-face {
+  font-family: "しねきゃぷしょん";
+  src: url('https://cdn.leafscape.be/cinecaption/cinecaption227.woff2')
+     format("woff2");
+}
+
+body {
+  font-family: 'しねきゃぷしょん';
+  text-align: center;
+  background: lightyellow;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
       cursor: pointer;
-      margin-bottom: 12px;
+      padding-bottom: 12px;
     }
 
     .done {
@@ -30,7 +37,7 @@
     <label for="memo">買い物メモ
       <input type="text" name="memo">
     </label>
-    <button>Add</button>
+    <button>メモ</button>
   </form>
 
   <p>買うものリスト</p>
@@ -39,7 +46,7 @@
 
   </ul>
 
-  <input type="button" value="Reset" onclick="window.location.reload();">
+  <input type="button" value="リセット" onclick="window.location.reload();">
 
   <script>
     'use strict'
