@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Practice</title>
+  <style>
+    li {
+      cursor: pointer;
+      margin-bottom: 12px;
+    }
+
+    .done {
+      text-decoration: line-through;
+    }
+  </style>
+</head>
+<body>
+  <h1>買い物メモアプリ</h1>
+  <form action="">
+    <label for="memo">買い物メモ
+      <input type="text" name="memo">
+    </label>
+    <button>Add</button>
+  </form>
+
+  <p>買うものリスト</p>
+
+  <ul>
+
+  </ul>
+
+  <input type="button" value="Reset" onclick="window.location.reload();">
+
+  <script>
+    'use strict'
+
+      {
+
+        document.querySelector('form').addEventListener('submit', e => {
+          e.preventDefault();
+          const memo = document.querySelector('input');
+
+          const li = document.createElement('li');
+
+          li.textContent = memo.value;
+
+          document.querySelector('ul').appendChild(li);
+
+          memo.value = '';
+          memo.focus();
+        });
+
+        const list = document.querySelector('li');
+
+        list.addEventListener('click', () => {
+          list.classList.toggle('done');
+        });
+      }
+  </script>
+</body>
+</html>
