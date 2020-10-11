@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JS Practice</title>
+  <!-- <link rel="stylesheet" href="css/styles.css"> -->
   <style>
     @font-face {
   font-family: "しねきゃぷしょん";
@@ -18,7 +19,7 @@ body {
 }
 
 ul {
-  list-style: none;
+  display: inline-block;
 }
 
 li {
@@ -29,25 +30,39 @@ li {
     .done {
       text-decoration: line-through;
     }
+
+footer {
+  margin-top: 32px;
+}
   </style>
 </head>
 <body>
   <h1>買い物メモアプリ</h1>
   <form action="">
-    <label for="memo">買い物メモ
+    <label for="memo">買うもの
       <input type="text" name="memo">
     </label>
-    <button>メモ</button>
+    <button>記憶</button>
   </form>
 
-  <p>買うものリスト</p>
+  <div id="target">
+    <p>買うものリスト</p>
+  
+    <ul>
+    
+    </ul><br>
+  </div>
 
-  <ul>
+  <img src="" id="result" alt="">
 
-  </ul>
 
   <input type="button" value="リセット" onclick="window.location.reload();">
 
+  <footer>
+    (c) coccoteacher.com
+  </footer>
+
+  <!-- <script src="js/main.js"></script> -->
   <script>
     'use strict'
 
@@ -56,15 +71,25 @@ li {
         document.querySelector('form').addEventListener('submit', e => {
           e.preventDefault();
           const memo = document.querySelector('input');
+          let errorCheck;
+          if (memo.value.length === 0) {
+            alert("なにか入力してください！");
+            errorCheck = false;
+          } else {
+            errorCheck = true;
+          }
 
           const li = document.createElement('li');
 
           li.textContent = memo.value;
 
-          document.querySelector('ul').appendChild(li);
 
-          memo.value = '';
-          memo.focus();
+          if (errorCheck === true) {
+            document.querySelector('ul').appendChild(li);
+            memo.value = '';
+            memo.focus();
+          }
+
         });
 
         const list = document.querySelector('li');
