@@ -1,174 +1,278 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>9マスパズルゲーム</title>
-  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-  <style>
-
-    .container {
-      display: flex;
-    }
-
-    .box {
-      width: 100px;
-      height: 100px;
-      background-color: skyblue;
-      cursor: pointer;
-      transition: .8s;
-      margin-right: 10px;
-      margin-bottom: 10px;
-    }
-
-    .circle {
-      background: pink;
-      border-radius: 50%;
-      transform: rotate(360deg);
-    }
-
-    h1 {
-      padding-left: 10px;
-    }
-
-    .fab {
-      font-size: 24px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>株式会社VIVO - 総合TOPページ</title>
+    <!-- reset css -->
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Noto+Serif+JP:wght@400;700&family=Open+Sans:ital@0;1&display=swap"
+        rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
+
 <body>
-  <h1>9マスパズルゲーム</h1>
+    <header class="header">
 
-  <p>ルール説明</p>
-  <p>各マスをクリックすると、そのマスと隣接する４マスが反転します。<br>
-  全てのマスをピンクの丸に出来たらクリアです。</p>
+        <div class="section-inner">
 
-  <div class="container">
-    <div class="box" id="target1"></div>
-    <div class="box" id="target2"></div>
-    <div class="box" id="target3"></div>
-  </div>
-  <div class="container">
-    <div class="box" id="target4"></div>
-    <div class="box" id="target5"></div>
-    <div class="box" id="target6"></div>
-  </div>
-  <div class="container">
-    <div class="box" id="target7"></div>
-    <div class="box" id="target8"></div>
-    <div class="box" id="target9"></div>
-  </div>
+            <h1 class="header-logo">
+                <a href="/VIVO/index.html">
+                    Vivo co.,ltd.
+                </a>
+            </h1>
 
-  <input type="button" value="Reset" onclick="window.location.reload();">
+            <nav class="header-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="/VIVO/index.html">ホーム</a></li>
+                    <li class="nav-item"><a href="#">会社概要</a></li>
+                    <li class="nav-item"><a href="#">事業内容</a></li>
+                    <li class="nav-item"><a href="#">ブログ</a></li>
+                    <li class="nav-item"><a href="#">採用情報</a></li>
+                    <li class="nav-item"><a href="#contact">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <p>Create by コッコ先生　<a href="https://twitter.com/coccosProgram"><span class="fab fa-twitter"></span></a></p>
-  
-  <a href="../jspractice.html">買い物メモアプリ</a>
+    <main>
 
-  <script>
-    'use strict';
+        <section class="first-view">
 
-    let random = Math.floor(Math.random() * 9);
+            <div class="section-inner">
 
-    const target1 = document.getElementById('target1')
-    const target2 = document.getElementById('target2')
-    const target3 = document.getElementById('target3')
-    const target4 = document.getElementById('target4')
-    const target5 = document.getElementById('target5')
-    const target6 = document.getElementById('target6')
-    const target7 = document.getElementById('target7')
-    const target8 = document.getElementById('target8')
-    const target9 = document.getElementById('target9')
+                <h1 class="main-copy">
+                    電気のある、<br>
+                    『当たり前』を支える。
+                </h1>
+            </div>
+        </section>
 
-    switch (random) {
-      case 0:
-      target1.classList.add('circle');
-      break
-      case 1:
-      target2.classList.add('circle');
-      break
-      case 2:
-      target3.classList.add('circle');
-      break
-      case 3:
-      target4.classList.add('circle');
-      break
-      case 4:
-      target5.classList.add('circle');
-      break
-      case 5:
-      target6.classList.add('circle');
-      break
-      case 6:
-      target7.classList.add('circle');
-      break
-      case 7:
-      target8.classList.add('circle');
-      break
-      case 8:
-      target9.classList.add('circle');
-      break
-    }
+        <section class="works-wrapper">
+
+            <div class="section-inner">
+
+                <h2 class="section-title">
+                    事業一覧
+                </h2>
+
+                <div class="works-contents">
+
+                    <div class="works-image-card">
+
+                        <a href="http://vivo-denki.com/">
+                            <img src="img/3932131_s.jpg" alt="Electrical construction">
+                        </a>
+
+                        <h3 class="works-image-title">
+                            <a href="http://vivo-denki.com/">
+                                電気工事
+                            </a>
+                        </h3>
+
+                        <p class="works-image-en-title">
+                            <a href="http://vivo-denki.com/">
+                                Electrical construction
+                            </a>
+                        </p>
+
+                        <p class="works-image-description">
+                            <a href="http://vivo-denki.com/">
+                                一般住宅から工場、ショールームまで、電気に関することならば幅広く対応可能です。
+                            </a>
+                        </p>
+                    </div>
+
+                    <div class="works-image-card">
+
+                        <a href="http://vivo-denki.com/reform/">
+                            <img src="img/485560_s.jpg" alt="Home remodeling">
+                        </a>
+
+                        <h3 class="works-image-title">
+                            <a href="http://vivo-denki.com/reform/">
+                                リフォーム
+                            </a>
+                        </h3>
+
+                        <p class="works-image-en-title">
+                            <a href="http://vivo-denki.com/reform/">
+                                Home remodeling
+                            </a>
+                        </p>
+
+                        <p class="works-image-description">
+                            <a href="http://vivo-denki.com/reform/">
+                                住まいのお悩み解決いたします。当店はお見積り無料です。
+                            </a>
+                        </p>
+                    </div>
+
+                    <div class="works-image-card">
+
+                        <a href="http://vivo-denki.com/logistics/">
+                            <img src="img/2534258_s.jpg" alt="Logistics">
+                        </a>
+                            
+                            <h3 class="works-image-title">
+                                <a href="http://vivo-denki.com/logistics/">
+                                    物流
+                                </a>
+                            </h3>
+                            
+                            <p class="works-image-en-title">
+                                <a href="http://vivo-denki.com/logistics/">
+                                    Logistics
+                                </a>
+                            </p>
+                            
+                            <p class="works-image-description">
+                                <a href="http://vivo-denki.com/logistics/">
+                                    『迅速』・『安全』・『確実』を遵守し、最善なる輸配送のご提案を実現いたします。
+                                </a>
+                            </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="blog-wrapper">
+
+            <div class="section-inner">
+
+                <h2 class="section-title">
+                    VIVO's NEWS
+                </h2>
+
+                <p class="section-title-subdesc">
+                    お客様の声や、施工事例などをご紹介致します。
+                </p>
+
+                <div class="blog-contents">
+
+                    <div class="blog-card">
+
+                        <a href="#">
+                            <img src="img/4145699_s.jpg" alt="blog-thumbnail">
+                        </a>
+
+                        <h3 class="blog-title">
+                            <a href="#">
+                                謹んで年始のご挨拶を申し上げます
+                            </a>
+                        </h3>
+
+                        <hr class="hr hr-red">
+
+                        <p class="blog-excerpt">
+                            新年、あけましておめでとうございます！ 旧年中は大変お世話になり、社員一同、心より御礼申し上げま<a href="#">[…]</a>
+                        </p>
+                    </div>
+
+                    <div class="blog-card">
+
+                        <a href="#">
+                            <img src="img/1560031.jpg" alt="blog-thumbnail">
+                        </a>
+
+                        <h3 class="blog-title">
+                            <a href="#">
+                                エアコン再取り付け工事✨
+                            </a>
+                        </h3>
+
+                        <hr class="hr hr-green">
+
+                        <p class="blog-excerpt">
+                            こんにちは(^^)/ 今年も後三日で終わってしまいますね😖 来年には、コロナが落ち着くといいです<a href="#">[…]</a>
+                        </p>
+                    </div>
+
+                    <div class="blog-card">
+
+                        <a href="#">
+                            <img src="img/4347050_s.jpg" alt="blog-thumbnail">
+                        </a>
+
+                        <h3 class="blog-title">
+                            <a href="#">
+                                エアコンクリーニング✨
+                            </a>
+                        </h3>
+
+                        <hr class="hr hr-blue">
+
+                        <p class="blog-excerpt">
+                            こんにちは(^^)/ 皆さん！エアコンクリーニングはしていますか？😊 エアコンは使<a href="#">[…]</a>
+                        </p>
+                    </div>
+
+                    <div class="blog-card">
+
+                        <a href="#">
+                            <img src="img/1727775_s.jpg" alt="blog-thumbnail">
+                        </a>
+
+                        <h3 class="blog-title">
+                            <a href="#">
+                                照明器具の取付け工事✨どっこいそりゃ✨
+                            </a>
+                        </h3>
+
+                        <hr class="hr hr-yellow">
+
+                        <p class="blog-excerpt">
+                            こんにちは(^^)/ 本日のブログは株式会社Best Ally様からのご依頼で 照明器具の取付け<a href="#">[…]</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-wrapper" id="contact">
+
+            <div class="section-inner">
+
+                <h2 class="section-title">
+                    お問い合わせ
+                </h2>
+
+                <p class="section-title-subdesc">
+                    お問い合わせは以下のフォーム、またはお電話・メールにて承ります。<br>
+                    便利なLINE登録もご利用ください。
+                </p>
+
+                <form action="">
+
+                    <input type="text" name="name" id="name" placeholder="お名前">
+
+                    <input type="email" name="email" id="email" placeholder="メールアドレス">
+
+                    <input type="text" name="subject" id="subject" placeholder="件名">
+
+                    <br>
+
+                    <textarea name="detail" id="detail" placeholder="本文"></textarea>
+
+                    <div class="button-area">
+                        <button type="submit" id="submit">メッセージ送信</button>
+                    </div>
 
 
-    target1.addEventListener('click', () => {
-      target1.classList.toggle('circle');
-      target2.classList.toggle('circle');
-      target4.classList.toggle('circle');
-    });
-    target2.addEventListener('click', () => {
-      target1.classList.toggle('circle');
-      target2.classList.toggle('circle');
-      target3.classList.toggle('circle');
-      target5.classList.toggle('circle');
-    });
-    target3.addEventListener('click', () => {
-      target2.classList.toggle('circle');
-      target3.classList.toggle('circle');
-      target6.classList.toggle('circle');
-    });
-    target4.addEventListener('click', () => {
-      target1.classList.toggle('circle');
-      target4.classList.toggle('circle');
-      target5.classList.toggle('circle');
-      target7.classList.toggle('circle');
-    });
-    target5.addEventListener('click', () => {
-      target2.classList.toggle('circle');
-      target4.classList.toggle('circle');
-      target5.classList.toggle('circle');
-      target6.classList.toggle('circle');
-      target8.classList.toggle('circle');
-    });
-    target6.addEventListener('click', () => {
-      target3.classList.toggle('circle');
-      target5.classList.toggle('circle');
-      target6.classList.toggle('circle');
-      target9.classList.toggle('circle');
-      // target8.classList.toggle('circle');
-    });
-    target7.addEventListener('click', () => {
-      target4.classList.toggle('circle');
-      target7.classList.toggle('circle');
-      target8.classList.toggle('circle');
-      // target6.classList.toggle('circle');
-      // target8.classList.toggle('circle');
-    });
-    target8.addEventListener('click', () => {
-      target5.classList.toggle('circle');
-      target7.classList.toggle('circle');
-      target8.classList.toggle('circle');
-      target9.classList.toggle('circle');
-      // target8.classList.toggle('circle');
-    });
-    target9.addEventListener('click', () => {
-      target6.classList.toggle('circle');
-      target8.classList.toggle('circle');
-      target9.classList.toggle('circle');
-      // target6.classList.toggle('circle');
-      // target8.classList.toggle('circle');
-    });
+                </form>
+            </div>
+        </section>
+    </main>
 
-  </script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="js/script.js"></script>
 </body>
+
 </html>
